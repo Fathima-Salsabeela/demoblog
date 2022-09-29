@@ -1,0 +1,35 @@
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h1>
+ 
+   {% if editMode %}
+        Modification de l'article
+  {% else %}
+      Création d'un article
+   {% endif %}
+ 
+</h1>
+
+
+{{form_start(form)}}
+
+{{form_row(form.marque)}}
+{{form_row(form.modele)}}
+{{form_row(form.description)}}
+{{form_row(form.prix)}}
+
+<button type="submit" class ="btn btn-primary mt-2"> 
+
+{% if editMode %}
+  Enregistrer les modifications
+  {% else %}
+  Ajouter l'article
+{% endif %}
+</button>
+
+{{form_end(form)}}
+
+{% endblock %}
