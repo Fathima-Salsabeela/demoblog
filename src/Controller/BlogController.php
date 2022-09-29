@@ -62,7 +62,7 @@ class BlogController extends AbstractController
 
      // dump($globals);
 
-     dump($article);
+     //dump($article);
 
          if($form->isSubmitted() && $form->isValid()){
 
